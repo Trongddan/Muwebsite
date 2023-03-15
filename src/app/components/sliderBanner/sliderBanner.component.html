@@ -1,0 +1,10 @@
+<div class="slider-wrapper-container">
+  <div #sliderContainer class="slider-wrapper">
+    <div #bannerItem *ngFor="let item of listArrayBanner" class="slider">
+      <img  [src]="item" alt="" class="banner-img" />
+    </div>
+  </div>
+  <ul class="list-dot">
+    <li  *ngFor="let item of listArrayBanner; index as idx" [style]="getStyleIndex(idx)" (click)="handleTransferSlide(idx)" class="dot-item"></li>
+  </ul>
+</div>

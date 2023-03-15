@@ -1,0 +1,39 @@
+.slider-wrapper-container{
+  display: flex;
+  position: relative;
+}
+.slider-wrapper {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+}
+.slider {
+  width: 100vw;
+  height: 90vh;
+}
+.banner-img {
+  width: 100vw;
+
+}
+.list-dot {
+  bottom: 102px;
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+}
+
+.dot-item {
+  margin: 0 12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid rgb(255, 255, 255);
+}
+.dot-item:hover
+{
+ background: salmon;
+}
