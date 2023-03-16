@@ -1,9 +1,12 @@
-import { Component } from "@angular/core";
+import { Component, Input } from '@angular/core';
 @Component({
-  selector:"component-header",
-  templateUrl:"./header.component.html",
-  styleUrls:['./header.component.css'],
+  selector: 'component-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent{
-  logoImg :string = 'assets/logo.png'
+export class HeaderComponent {
+
+  @Input() isFix: boolean=false;
+  logoImg: string = 'assets/logo.png';
+
 }

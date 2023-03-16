@@ -1,5 +1,6 @@
 @media screen and (min-width: 1024px) {
   .header {
+    z-index: 1000;
     height: 80px;
     width: 100%;
     background: #97212d;
@@ -7,6 +8,15 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 40px;
+    animation: all 2s linear;
+  }
+  .toFixed {
+    position: fixed;
+    animation: tofixed linear 0.5s 1 forwards ;
+  }
+
+   .notFixed{
+    animation: isNotfixed linear 0.3s 1 forwards ;
   }
   .logo {
     height: 40px;
@@ -50,5 +60,21 @@
   }
   .nav-item:hover .border_bottom {
     width: 100%;
+  }
+}
+@keyframes tofixed {
+  from {
+    opacity: 0;
+    transform: translate(0, -20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes isNotfixed {
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
   }
 }

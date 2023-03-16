@@ -1,0 +1,75 @@
+.first-team {
+  padding: 70px 250px;
+}
+h5 {
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: "Roboto";
+}
+.position {
+  padding: 0 100px;
+  margin-bottom: 20px;
+}
+.position-name {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: "Roboto";
+  border-bottom: 1.5px solid #eeee;
+  margin-bottom: 20px;
+}
+.list-player {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.list-player .image {
+  cursor: pointer;
+  width: 190px;
+  height: 190px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6.4px;
+}
+.image img {
+  width: 250px;
+  height: 197px;
+  object-fit: cover;
+
+  transition: all 0.3s ease-in-out;
+}
+.image p {
+  position: absolute;
+  white-space: pre-line;
+  bottom: 40px;
+  font-size: 18px;
+  color: #ffff;
+  text-transform: uppercase;
+  width: 60px;
+  left: 20px;
+  font-weight: bold;
+  font-family: "Roboto";
+}
+.image:hover img {
+  transform: scale(1.07);
+  filter: brightness(0.9);
+}
+.show {
+  opacity: 0;
+}
+.active .show {
+  animation-name: animationLoading;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes animationLoading {
+  from {
+    opacity: 0;
+    transform: translate(100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}

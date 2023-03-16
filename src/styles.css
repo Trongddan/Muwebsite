@@ -3,6 +3,8 @@ p,ul,li,a
 {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  color: rgb(228, 213, 213);
 }
 body{
   padding: 0;
@@ -11,4 +13,7 @@ body{
 *
 {
   box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
 }

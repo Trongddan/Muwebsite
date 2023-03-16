@@ -1,4 +1,4 @@
-<div class="header">
+<div [class]="{ toFixed: isFix, notFixed: !isFix }" class="header">
   <div class="header-left">
     <img class="logo" [src]="logoImg" alt="" />
     <ul class="list-nav-left">
@@ -7,7 +7,7 @@
         <div class="border_bottom"></div>
       </li>
       <li class="nav-item">
-        FIrst Team
+        <a href="#firstTeam"> FIrst Team</a>
         <div class="border_bottom"></div>
       </li>
       <li class="nav-item">
@@ -22,8 +22,14 @@
   </div>
   <div class="header-right">
     <ul class="list-nav-right">
-      <li class="nav-item">Sign in<div class="border_bottom"></div></li>
-      <li class="nav-item">Sign up<div class="border_bottom"></div></li>
+      <li class="nav-item">
+        Sign in
+        <div class="border_bottom"></div>
+      </li>
+      <li class="nav-item">
+        Sign up
+        <div class="border_bottom"></div>
+      </li>
     </ul>
   </div>
 </div>
