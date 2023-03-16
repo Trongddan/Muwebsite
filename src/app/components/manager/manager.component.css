@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Kantumruy+Pro:ital,wght@0,100;0,200;1,100&display=swap");
+.manager-wrapper {
+  display: flex;
+  background-color: #3f3f3f;
+  padding: 5px 9%;
+}
+
+.manager-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.leftTo{
+  opacity: 0;
+}
+.bottomTo{
+  opacity: 0;
+}
+.rightTo{
+  opacity: 0;
+}
+
+.active .leftTo{
+  animation-name: leftTo;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+
+
+}
+.active .bottomTo{
+  animation-name: bottomTo;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+
+}
+.active .rightTo{
+  animation-name: rightTo;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+
+}
+.manager-info p {
+  margin: 20px 0;
+}
+.manager-info-position {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Roboto";
+  width: fit-content;
+  border-bottom: 3px solid rgb(255, 25, 0);
+}
+.manager-info-name {
+  word-spacing: 10px;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: "Roboto";
+  width: 160px;
+  white-space: pre-wrap;
+}
+.manager-info-slogan {
+  font-family: "Roboto";
+  font-size: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 50;
+  word-spacing: 5px;
+}
+.manager-img {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+.manager-img img{
+  width: 100%;
+}
+.manager-achivement {
+  padding: 10px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.manager-achivement p {
+  color: #ffffff;
+  font-size: 20px;
+  font-family: "Roboto";
+  margin: 20px 0;
+}
+@keyframes leftTo {
+  from {
+    opacity: 0;
+    transform: translate(-100%,0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
+@keyframes bottomTo {
+  from {
+    opacity: 0;
+    transform: translate(0,-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
+@keyframes rightTo {
+  from {
+    opacity: 0;
+    transform: translate(100%,0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
