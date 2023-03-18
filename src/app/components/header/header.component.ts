@@ -8,5 +8,9 @@ export class HeaderComponent {
 
   @Input() isFix: boolean=false;
   logoImg: string = 'assets/logo.png';
+  ngOnChanges(){
+    console.log(1);
 
+
+  }
 }
