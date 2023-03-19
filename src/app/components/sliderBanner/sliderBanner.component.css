@@ -1,4 +1,4 @@
-.slider-wrapper-container{
+.slider-wrapper-container {
   display: flex;
   position: relative;
 }
@@ -15,7 +15,6 @@
 }
 .banner-img {
   width: 100vw;
-
 }
 .list-dot {
   bottom: 102px;
@@ -33,7 +32,25 @@
   border-radius: 50%;
   border: 2px solid rgb(255, 255, 255);
 }
-.dot-item:hover
-{
- background: salmon;
+.dot-item:hover {
+  background: salmon;
+}
+.nav-title {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  list-style: none;
+  display: flex;
+}
+.nav-title li {
+  font-weight: bolder;
+  font-family: "Roboto";
+  font-size: 1.3em;
+  color: rgb(228, 213, 213);
+  margin: 0 12px;
+}
+.nav-title li:hover a{
+    color: red;
 }

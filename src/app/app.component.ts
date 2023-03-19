@@ -11,23 +11,28 @@ export class AppComponent {
   isHeaderFixed: boolean = false;
   document: any = null;
   alo: any = null;
-  constructor(@Inject(DOCUMENT) document: Document,private dataService: DataService) {
+  constructor(
+    @Inject(DOCUMENT) document: Document,
+    private dataService: DataService
+  ) {
     this.document = document;
   }
   ngOnInit() {
-
     const items = this.document.querySelectorAll('.item');
+    console.log(items);
+
     document.addEventListener('scroll', () => {
       if (window.scrollY > 300) {
         this.isHeaderFixed = true;
-        this.dataService.setData(this.isHeaderFixed)
       } else {
         this.isHeaderFixed = false;
-        this.dataService.setData(this.isHeaderFixed)
       }
+      this.dataService.setData(this.isHeaderFixed);
 
       items.forEach((item: any) => {
         if (item.offsetTop - window.scrollY < screen.availHeight) {
+          console.log(12);
+
           item.classList.add('active');
         } else {
           item.classList.remove('active');

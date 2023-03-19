@@ -1,1 +1,8 @@
-dsfsdfsdf
+<div class="myteam-wrapper">
+  <div class="myTeam">
+    <ul class="list-nav">
+        <li *ngFor="let item of listNav" [class]="isActivated===item.id?'actived':''" [routerLink]="item.url" class="item-nav" (click)="handleClickNav(item.id)">{{item.name}}</li>
+    </ul>
+  </div>
+</div>
+<router-outlet></router-outlet>

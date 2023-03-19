@@ -1,17 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, OnInit,Inject } from '@angular/core';
 import { DataService } from 'src/app/services/dataService';
 
 @Component({
   selector: 'component-home',
   templateUrl: './home.component.html',
-  styleUrls:['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
+export class HomeComponent {
+  document:any=null
+constructor(@Inject(DOCUMENT) document : Document){
+this.document=document
+}
+ngOnInit(){
+  const items = this.document.querySelectorAll('.item');
+  document.addEventListener('scroll', () => {
+    items.forEach((item: any) => {
+      if (item.offsetTop - window.scrollY < screen.availHeight) {
+        console.log(12);
 
-export class HomeComponent  {
-  isHeaderFixed:any
-constructor(private dataService: DataService){}
-  ngOnChanges(){
-    this.isHeaderFixed= this.dataService.getData()
-    console.log(this.dataService.getData());
-  }
+        item.classList.add('active');
+      }
+    });
+  });
+}
+
 }

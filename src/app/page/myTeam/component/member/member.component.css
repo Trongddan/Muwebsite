@@ -1,0 +1,74 @@
+.member-wrapper{
+  color: #000000;
+  padding: 0 9%;
+  font-family: 'Roboto';
+  position: relative;
+
+}
+thead{
+  background: rgb(0, 0, 0);
+
+}
+th{
+  text-transform: uppercase;
+  height: 40px;
+  line-height: 40px;
+  font-size: 1em;
+  color: #fff;
+}
+td{
+  height: 38px;
+  line-height: 38px;
+  padding: 6px;
+}
+tr{
+  cursor: pointer;
+}
+
+.member-wrapper-content{
+  padding: 20px 0;
+  display: flex;
+}
+.mr-1{
+  margin-right: 12px;
+}
+.table-block{
+    width: 60%;
+}
+.table-member{
+
+}
+.info-team{
+width: 40%;
+padding: 0 40px;
+}
+.info-team-del{
+
+}
+.list-info{
+  list-style: none;
+}
+.info-item{
+  display: flex;
+  color: #000000;
+  align-items: center;
+  padding: 8px 0;
+}
+.info-item-anw{
+  color: #000;
+  margin: 0 12px;
+}
+.label-team{
+  width: 50px;
+  margin: 0 12px;
+}
+.info-item-title{
+  width: 130px;
+  color: #000000;
+  font-weight: 600;
+}
+.btn-regis{
+  position: absolute;
+  top: 20px;
+  right: 10%;
+}

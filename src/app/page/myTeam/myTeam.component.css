@@ -1,0 +1,41 @@
+.myteam-wrapper{
+  padding: 0px 9%;
+  background: rgb(0, 0, 0);
+}
+.myTeam{
+    height: 50px;
+
+}
+
+.list-nav{
+  height: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.item-nav{
+  height: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  font-family: 'Roboto';
+  margin: 0 15px 0 0;
+  position: relative;
+}
+.item-nav::before{
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 0%;
+  bottom: -5px;
+  left: 0;
+  background: red;
+  transition: all 0.3s ease-in-out;
+}
+.actived::before{
+  width: 100%;
+}
+.item-nav:hover::before{
+  width: 100%;
+}

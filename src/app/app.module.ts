@@ -8,6 +8,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { ManagerComponent } from './components/manager/manager.component';
 import { SliderBanner } from './components/sliderBanner/sliderBanner.component';
 import { HomeComponent } from './page/home/home.component';
+import { CalendarComponent } from './page/myTeam/component/calendar/calendar.component';
+import { MemberComponent } from './page/myTeam/component/member/member.component';
+import { VoteComponent } from './page/myTeam/component/vote/vote.component';
 import { MyTeamComponent } from './page/myTeam/myTeam.component';
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { MyTeamComponent } from './page/myTeam/myTeam.component';
     ManagerComponent,
     MyTeamComponent,
     HomeComponent,
+    MemberComponent,
+    VoteComponent,
+    CalendarComponent
   ],
   imports: [BrowserModule, AppRoutingModule, CarouselModule],
   providers: [],
