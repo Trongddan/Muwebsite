@@ -1,4 +1,4 @@
-<div class="manager-wrapper item">
+<div id="manager" class="manager-wrapper item">
   <div class="manager-info leftTo">
     <p class="manager-info-position">Manager</p>
     <p class="manager-info-name">Ole gunnar solskjaer</p>
@@ -7,10 +7,45 @@
       POTENTIAL IS FANTASTIC"
     </p>
   </div>
-  <div class="manager-img bottomTo"><img [src]="managerImg" alt=""></div>
+  <div class="manager-img bottomTo"><img [src]="managerImg" alt="" /></div>
   <div class="manager-achivement rightTo">
-    <p>Matches: <br> 131</p>
-    <p>wins: <br> 73</p>
-    <p>trophies: <br> 0</p>
+    <p>
+      Matches: <br />
+      131
+    </p>
+    <p>
+      wins: <br />
+      73
+    </p>
+    <p>
+      trophies: <br />
+      0
+    </p>
+  </div>
+</div>
+<div class="manager-biography">
+  <h3>Biography</h3>
+  <div class="manager-biography-des">
+    Former Manchester United and Norway striker Ole Gunnar Solskjaer returned to
+    Old Trafford in a very different role on 19 December 2018, when he was
+    appointed as the club's caretaker manager
+  </div>
+  <div class="table-bio">
+    <div class="item-bio">
+      <div class="title">Position</div>
+      <p class="position-name">Manager</p>
+      <p class="title">Joined</p>
+      <p class="hightlight-text">19 dec 2018</p>
+    </div>
+    <div class="item-bio">
+      <div class="title">country</div>
+      <div class="country "><img [src]="countryImg" alt=""> norwegian</div>
+      <p class="title">first match</p>
+      <p class="hightlight-text">22 DEc 2018</p>
+    </div>
+    <div class="item-bio">
+      <div class="title">Date of birth</div>
+      <p class="hightlight-text">26 feb 1973</p>
+    </div>
   </div>
 </div>

@@ -22,10 +22,8 @@ export class AppComponent {
         this.isHeaderFixed = false;
       }
       items.forEach((item: any) => {
-        if (item.offsetTop - window.scrollY < screen.availHeight) {
+        if (item.offsetTop - window.scrollY < screen.availHeight -200) {
           item.classList.add('active');
-        } else {
-          item.classList.remove('active');
         }
       });
     });

@@ -1,0 +1,19 @@
+.footer-wrapper {
+  height: 70px;
+  padding: 15px;
+
+}
+.list-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand-item {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+.brand-item img {
+  width: 100%;
+}
