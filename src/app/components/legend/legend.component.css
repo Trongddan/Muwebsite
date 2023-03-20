@@ -1,0 +1,47 @@
+.legend{
+  background-color: #3F3F3F;
+  padding: 50px 9%;
+  font-family: 'Roboto';
+
+}
+h2{
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #ffff;
+  padding: 5px 0;
+  margin-bottom: 30px;
+  border-bottom: 3px solid red;
+  width: fit-content;
+}
+.list-legend{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.image{
+  cursor: pointer;
+  position: relative;
+  border-radius: 6.4px;
+  width: 200px;
+  height: 197px;
+  overflow: hidden;
+}
+.image img{
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+
+}
+.image:hover img{
+  width: 237px;
+}
+.image p{
+  position: absolute;
+  bottom: 25%;
+  left: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  width: 100px;
+  text-transform: uppercase;
+}

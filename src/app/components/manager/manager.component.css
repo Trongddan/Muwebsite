@@ -126,3 +126,68 @@
     transform: translate(0,0);
   }
 }
+.manager-biography{
+  padding: 20px 15%;
+}
+h3{
+  font-family: 'Roboto';
+  font-size: 1.4em;
+  color: grey;
+  text-transform: uppercase;
+}
+.manager-biography-des{
+  font-family: 'Roboto';
+  line-height: 1.4;
+  font-weight: 600;
+  border-bottom: 1px solid ;
+  padding: 5px 0;
+}
+.table-bio{
+  padding: 15px 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.item-bio{
+  width: 300px;
+}
+.title{
+  font-family: 'Roboto';
+    text-transform: uppercase;
+    color: grey;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 15px;
+
+}
+p{
+  font-family: 'Roboto';
+   margin-bottom: 15px;
+}
+.position-name{
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.country{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: #000000;
+  font-family: 'Roboto';
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.country img{
+  width: 40px;
+  height: 40px;
+}
+
+.hightlight-text{
+  font-family: 'Roboto';
+  text-transform: uppercase;
+  color: red;
+  font-weight: 600;
+  font-size: 1.5em;
+}

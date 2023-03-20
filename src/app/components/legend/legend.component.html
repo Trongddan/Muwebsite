@@ -1,0 +1,12 @@
+<div class="legend item">
+  <h2 class="legend-title">lengends</h2>
+  <div class="list-legend">
+    <div *ngFor="let item of legendPlayer" class="image show">
+      <img [src]="item.img" alt="" />
+      <p>{{ item.name }}</p>
+      <span class="nummber">{{
+        item.number < 10 ? "0" + item.number : item.number
+      }}</span>
+    </div>
+  </div>
+</div>

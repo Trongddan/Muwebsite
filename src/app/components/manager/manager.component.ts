@@ -7,4 +7,5 @@ import { Component } from "@angular/core";
 })
 export class ManagerComponent{
   managerImg:string = 'assets/man40342.png'
+  countryImg:string='assets/country.png'
 }

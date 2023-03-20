@@ -30,12 +30,8 @@ export class AppComponent {
       this.dataService.setData(this.isHeaderFixed);
 
       items.forEach((item: any) => {
-        if (item.offsetTop - window.scrollY < screen.availHeight) {
-          console.log(12);
-
+        if (item.offsetTop - window.scrollY < screen.availHeight -200) {
           item.classList.add('active');
-        } else {
-          item.classList.remove('active');
         }
       });
     });

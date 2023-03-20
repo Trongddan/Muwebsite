@@ -4,7 +4,9 @@ import { CarouselModule } from 'primeng/carousel';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirstTeamComponent } from './components/firstTeam/firstTeam.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { LengendComponent } from './components/legend/legend.component';
 import { ManagerComponent } from './components/manager/manager.component';
 import { SliderBanner } from './components/sliderBanner/sliderBanner.component';
 import { HomeComponent } from './page/home/home.component';
@@ -23,7 +25,9 @@ import { MyTeamComponent } from './page/myTeam/myTeam.component';
     HomeComponent,
     MemberComponent,
     VoteComponent,
-    CalendarComponent
+    CalendarComponent,
+    LengendComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, CarouselModule],
   providers: [],

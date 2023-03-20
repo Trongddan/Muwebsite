@@ -22,6 +22,7 @@ h5 {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  gap: 10px;
 }
 .list-player .image {
   cursor: pointer;
@@ -73,3 +74,12 @@ h5 {
     transform: translate(0, 0);
   }
 }
+.nummber{
+  position: absolute;
+  color: #ffff;
+  top: 10px;
+  font-size: 24px;
+  font-weight: 500;
+  left: 10px;
+}
+

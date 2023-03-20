@@ -11,7 +11,7 @@
 }
 .slider {
   width: 100vw;
-  height: 90vh;
+  height: min(90vh, calc( 100vw / 1.8));
 }
 .banner-img {
   width: 100vw;
