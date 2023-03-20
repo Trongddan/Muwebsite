@@ -10,13 +10,12 @@
         <p>My Team</p>
         <div class="border_bottom"></div>
       </li>
-
     </ul>
   </div>
   <div class="header-right">
     <ul class="list-nav-right">
-      <li class="nav-item">
-        Sign in
+      <li (click)="handleLogin(true)" class="nav-item">
+        Sign in {{ username}}
         <div class="border_bottom"></div>
       </li>
       <li class="nav-item">

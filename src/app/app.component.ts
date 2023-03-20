@@ -10,7 +10,7 @@ import { DataService } from './services/dataService';
 export class AppComponent {
   isHeaderFixed: boolean = false;
   document: any = null;
-  alo: any = null;
+  isLogin: boolean = false;
   constructor(
     @Inject(DOCUMENT) document: Document,
     private dataService: DataService
@@ -30,11 +30,14 @@ export class AppComponent {
       this.dataService.setData(this.isHeaderFixed);
 
       items.forEach((item: any) => {
-        if (item.offsetTop - window.scrollY < screen.availHeight -200) {
+        if (item.offsetTop - window.scrollY < screen.availHeight - 200) {
           item.classList.add('active');
         }
       });
     });
+  }
+  onLogin(event: any) {
+    this.isLogin = event;
   }
   ngAfterViewInit() {}
 }

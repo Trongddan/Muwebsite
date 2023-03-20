@@ -1,0 +1,80 @@
+.login-wrapper {
+  position: fixed;
+  background: rgb(46, 34, 34,0.5) ;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  animation: loginAppear 0.3s linear alternate;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  font-family: 'Roboto';
+}
+.form-login {
+  padding: 10px 40px;
+  margin-top: 5%;
+  position: relative;
+  width: 500px;
+  max-width: 100%;
+  height: 65vh;
+  background: #d11b1b;
+  box-shadow: 3px 3px 5px gray;
+  border-radius: 6.4px;
+}
+label{
+  color: bisque;
+  margin: 12px 0;
+  font-size: 1.3em;
+}
+.form-title{
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+  color: bisque;
+}
+.form-group{
+  margin: 15px 0;
+}
+.close-icon {
+  cursor: pointer;
+  position: absolute;
+  color: bisque;
+  top: 5px;
+  right: 15px;
+  font-size: 1.6em;
+}
+.btn-login{
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+.btnlg:hover{
+  box-shadow: 4px 5px 3px gray;
+}
+.btnlg{
+  background: rgb(252, 229, 201);
+  color: #d11b1b;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.login-footer{
+  margin: 12px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.login-footer p:hover{
+  color: bisque;
+}
+.login-footer p{
+  cursor: pointer;
+}
+@keyframes loginAppear {
+  from {
+    transform: translateY(-200px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

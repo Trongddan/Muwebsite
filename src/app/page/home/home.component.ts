@@ -17,8 +17,6 @@ ngOnInit(){
   document.addEventListener('scroll', () => {
     items.forEach((item: any) => {
       if (item.offsetTop - window.scrollY < screen.availHeight) {
-        console.log(12);
-
         item.classList.add('active');
       }
     });

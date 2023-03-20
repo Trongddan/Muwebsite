@@ -1,0 +1,34 @@
+<div class="login-wrapper">
+  <div class="form-login">
+    <div (click)="handleCloseLogin(false)" class="close-icon">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+    <p class="form-title">Đăng nhập</p>
+    <div class="form-group">
+      <label for="">Tài khoản</label>
+      <input
+        [(ngModel)]="username"
+        type="text"
+        placeholder="Nhập tài khoản"
+        class="form-control"
+      />
+    </div>
+    <div class="form-group">
+      <label for="">Mật khẩu</label>
+      <input
+        [(ngModel)]="password"
+        type="password"
+        placeholder="Nhập mật khẩu"
+        class="form-control"
+      />
+    </div>
+    <div class="btn-login">
+      <button (click)="userLogin()" class="btn btnlg">Đăng nhập</button>
+    </div>
+    <div class="login-footer">
+      <p>Quên mật khẩu</p>
+      <p>Đăng ký</p>
+    </div>
+    <div></div>
+  </div>
+</div>
