@@ -66,5 +66,28 @@
       <button class="btn btn-success mt-4">Chỉnh sửa</button>
     </div>
   </div>
-  <button class="btn btn-success btn-regis">Đăng ký thành viên</button>
+  <button
+    (click)="handleClickToAddnewMember()"
+    class="btn btn-success btn-regis"
+  >
+    Đăng ký thành viên
+  </button>
+</div>
+<div *ngIf="isRegisterNewMember" class="modal-add-member">
+  <div class="form-add">
+    <h3 class="form-title">Đăng ký tài khoản thành viên</h3>
+    <div (click)="handleCloseToAddnewMember()" class="close-icon">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="form">
+      <div class="form-group">
+        <label for="">Tài khoản</label>
+        <input type="text" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="">Tài khoản</label>
+        <input type="text" class="form-control" />
+      </div>
+    </div>
+  </div>
 </div>

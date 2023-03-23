@@ -10,6 +10,7 @@ import { UserService } from 'src/app/services/userService';
 })
 export class MemberComponent {
   listPlayer: any = null;
+  isRegisterNewMember :any =false;
   team: any = null;
   constructor(
     private userService: UserService,
@@ -32,6 +33,12 @@ export class MemberComponent {
         console.log(err);
       }
     );
+  }
+  handleClickToAddnewMember(){
+    this.isRegisterNewMember=true
+  }
+  handleCloseToAddnewMember(){
+    this.isRegisterNewMember=false
   }
 
   ngOnInit() {
