@@ -19,7 +19,7 @@ export class AppComponent {
   }
   ngOnInit() {
     const items = this.document.querySelectorAll('.item');
-    console.log(items);
+
 
     document.addEventListener('scroll', () => {
       if (window.scrollY > 300) {
@@ -27,8 +27,6 @@ export class AppComponent {
       } else {
         this.isHeaderFixed = false;
       }
-      this.dataService.setData(this.isHeaderFixed);
-
       items.forEach((item: any) => {
         if (item.offsetTop - window.scrollY < screen.availHeight - 200) {
           item.classList.add('active');

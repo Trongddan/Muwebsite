@@ -6,3 +6,8 @@ export const userStorage = (user: any) => {
 export const getUserName = () => {
   return localStorage.getItem('username');
 };
+export const clearUser = () => {
+  localStorage.removeItem('accessToken');
+  localStorage.removeItem('username');
+  localStorage.removeItem('_id');
+};

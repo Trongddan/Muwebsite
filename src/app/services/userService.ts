@@ -14,4 +14,8 @@ export class UserService {
   userLogin(param:any){
     return this.http.post(apiRouter.login,param) as Observable<any>
   }
+  //getPlayer:
+  getAllPlayer(){
+    return this.http.get(apiRouter.getPlayer) as Observable<any>
+}
 }

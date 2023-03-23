@@ -5,8 +5,8 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  private dataSubject = new BehaviorSubject<any>(null);
-  public data$ = this.dataSubject.asObservable();
+  private dataSubject = new BehaviorSubject<String>("");
+  public data$ = this.dataSubject;
 
   constructor() { }
 
@@ -15,6 +15,6 @@ export class DataService {
   }
 
   getData(): any {
-    return this.dataSubject.getValue();
+    return this.data$.getValue();
   }
 }

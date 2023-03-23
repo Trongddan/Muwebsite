@@ -1,8 +1,4 @@
-import {
-  Component,
-  EventEmitter,
-  Output,
-} from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 import { UserService } from 'src/app/services/userService';
 import { userStorage } from 'src/app/utils/storage';
@@ -21,32 +17,29 @@ export class LoginComponent {
 
   subject = new BehaviorSubject(null);
 
-
-
-  constructor(private userService: UserService,private dataService : DataService) {}
+  constructor(
+    private userService: UserService,
+    private dataService: DataService
+  ) {}
   handleCloseLogin(param: boolean) {
     this.onHandleCloseLogin.emit(param);
   }
   //dang nhap
   userLogin() {
-    // this.userService
-    //   .userLogin({ username: this.username, password: this.password })
-    //   .subscribe(
-    //     (res) => {
-    //       userStorage(res);
-    //       this.onHandleCloseLogin.emit(false);
-    //       console.log(res.username);
-
-
-    //     },
-    //     (err) => {
-    //       console.log(err);
-    //     }
-    //   );
-    const c = 'value of c';
+    this.userService
+      .userLogin({ username: this.username, password: this.password })
+      .subscribe(
+        (res) => {
+          userStorage(res);
+          this.onHandleCloseLogin.emit(false);
+          this.dataService.setData(res.username);
+        },
+        (err) => {
+          console.log(err);
+        }
+      );
 
     // Set data in service
-    this.dataService.setData(c);
   }
   ngOnInit() {}
 }

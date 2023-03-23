@@ -1,5 +1,11 @@
-import { Component, Input, Output, EventEmitter,AfterViewInit } from '@angular/core';
-import { getUserName } from 'src/app/utils/storage';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  AfterViewInit,
+} from '@angular/core';
+import { clearUser, getUserName } from 'src/app/utils/storage';
 import { Subscription } from 'rxjs';
 import { DataService } from 'src/app/services/dataService';
 
@@ -9,7 +15,7 @@ import { DataService } from 'src/app/services/dataService';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  c: any = null;
+  username: any = null;
   subscription: Subscription;
   @Input() isFix: boolean = false;
   @Output() onHandleLogin = new EventEmitter();
@@ -19,14 +25,21 @@ export class HeaderComponent {
   }
   constructor(private dataService: DataService) {
     // Subscribe to data changes
-    this.subscription = this.dataService.data$.subscribe(data => {
-      this.c = data;
+    this.subscription = this.dataService.data$.subscribe((c) => {
+      this.username = dataService.getData();
     });
   }
-
+  logOut() {
+    clearUser();
+    this.username=''
+  }
+  ngOnInit() {
+    if (getUserName()) {
+      this.username = getUserName();
+    }
+  }
   ngOnDestroy() {
     // Unsubscribe from data changes when component is destroyed
     this.subscription.unsubscribe();
   }
-
 }
