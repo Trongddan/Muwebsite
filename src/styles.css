@@ -43,6 +43,12 @@ html {
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
+.toast-body
+{
+  margin-top: 10px !important;
+  margin-bottom: 15px !important;
+
+}
 @keyframes animationLoading {
   from {
     opacity: 0;

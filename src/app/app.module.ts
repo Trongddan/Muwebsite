@@ -17,6 +17,7 @@ import { CalendarComponent } from './page/myTeam/component/calendar/calendar.com
 import { MemberComponent } from './page/myTeam/component/member/member.component';
 import { VoteComponent } from './page/myTeam/component/vote/vote.component';
 import { MyTeamComponent } from './page/myTeam/myTeam.component';
+import { ToastService,AngularToastifyModule } from 'angular-toastify';
 
 @NgModule({
   declarations: [
@@ -40,8 +41,9 @@ import { MyTeamComponent } from './page/myTeam/myTeam.component';
     CarouselModule,
     FormsModule,
     HttpClientModule,
+    AngularToastifyModule,
   ],
-  providers: [],
+  providers: [ToastService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
