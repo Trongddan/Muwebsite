@@ -65,6 +65,8 @@ export class MemberComponent {
   }
 
   ngOnInit() {
+    console.log("alo");
+
     this.getListAllPlayer();
     this.getTeam();
   }
