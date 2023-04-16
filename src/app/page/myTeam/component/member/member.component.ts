@@ -66,7 +66,7 @@ export class MemberComponent {
 
   ngOnInit() {
     console.log("alo");
-
+    console.log("Đây la thăng Nam");
     this.getListAllPlayer();
     this.getTeam();
   }
