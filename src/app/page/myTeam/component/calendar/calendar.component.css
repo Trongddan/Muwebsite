@@ -1,0 +1,58 @@
+.calendar-wrapper {
+  padding: 20px 9%;
+  display: flex;
+  font-family: "Roboto";
+}
+.calender-left {
+  width: 50%;
+  height: 40vh;
+
+
+}
+.two-team {
+ margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.team{
+  font-size: 1.6em;
+  font-weight: 600;
+  padding: 0 12px;
+}
+.calender-right {
+  width: 50%;
+}
+.date-match{
+  padding: 25px 0;
+  text-transform: capitalize;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.place-match{
+  text-transform: capitalize;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.table-block
+{
+  margin-top: 20px;
+  height: 50vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.table-block::-webkit-scrollbar-track{
+  width: 10px;
+  background: transparent;
+}
+.table-block::-webkit-scrollbar-thumb{
+  width: 1px;
+  background: rgb(224, 224, 232);
+  border-radius: 6.4px;
+}
+::-webkit-scrollbar{
+  width: 8px;
+  background:transparent;
+}

@@ -1,30 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
-p,ul,li,a,h2
-{
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+p,
+ul,
+li,
+a p,
+ul,
+li,
+a,
+h2 {
   margin: 0;
   padding: 0;
   text-decoration: none;
   color: rgb(228, 213, 213);
 }
-body{
+body {
   padding: 0;
   margin: 0;
 }
-*
-{
+* {
   box-sizing: border-box !important;
 }
-html{
+html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
-.delay02{
+.delay02 {
   animation-delay: 0.2s;
 }
-.delay04{
+.delay04 {
   animation-delay: 0.4s;
 }
-.delay06{
+.delay06 {
   animation-delay: 0.6s;
 }
 .show {
@@ -35,6 +42,12 @@ html{
   animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
+}
+.toast-body
+{
+  margin-top: 10px !important;
+  margin-bottom: 15px !important;
+
 }
 @keyframes animationLoading {
   from {

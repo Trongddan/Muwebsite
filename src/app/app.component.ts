@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { DataService } from './services/dataService';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +10,17 @@ import { DOCUMENT } from '@angular/common';
 export class AppComponent {
   isHeaderFixed: boolean = false;
   document: any = null;
-  alo: any = null;
-  constructor(@Inject(DOCUMENT) document: Document) {
+  isLogin: boolean = false;
+  constructor(
+    @Inject(DOCUMENT) document: Document,
+    private dataService: DataService
+  ) {
     this.document = document;
   }
   ngOnInit() {
     const items = this.document.querySelectorAll('.item');
+
+
     document.addEventListener('scroll', () => {
       if (window.scrollY > 300) {
         this.isHeaderFixed = true;
@@ -22,11 +28,14 @@ export class AppComponent {
         this.isHeaderFixed = false;
       }
       items.forEach((item: any) => {
-        if (item.offsetTop - window.scrollY < screen.availHeight -200) {
+        if (item.offsetTop - window.scrollY < screen.availHeight - 200) {
           item.classList.add('active');
         }
       });
     });
+  }
+  onLogin(event: any) {
+    this.isLogin = event;
   }
   ngAfterViewInit() {}
 }

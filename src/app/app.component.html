@@ -1,6 +1,6 @@
-<component-header [isFix]="isHeaderFixed"> </component-header>
-<component-slide></component-slide>
-<component-firstTeam></component-firstTeam>
-<component-manager></component-manager>
-<component-legend></component-legend>
-<component-footer></component-footer>
+<div >
+  <component-header [isFix]="isHeaderFixed" (onHandleLogin)="onLogin($event)"> </component-header>
+  <router-outlet></router-outlet>
+  <component-login (onHandleCloseLogin)="onLogin($event)" *ngIf="isLogin"></component-login >
+</div>
+<lib-toastify-toast-container [autoClose]="3000" [iconLibrary]="'font-awesome'"></lib-toastify-toast-container>

@@ -2,27 +2,19 @@
   <div class="header-left">
     <img class="logo" [src]="logoImg" alt="" />
     <ul class="list-nav-left">
-      <li class="nav-item">
-        <p>My team</p>
+      <li routerLink="/" class="nav-item">
+        Trang chủ
         <div class="border_bottom"></div>
       </li>
-      <li class="nav-item">
-        <a href="#firstTeam"> FIrst Team</a>
-        <div class="border_bottom"></div>
-      </li>
-      <li class="nav-item">
-        <a href="#manager"> Manager</a>
-        <div class="border_bottom"></div>
-      </li>
-      <li class="nav-item">
-        <a href="#legend"> LEgend</a>
+      <li routerLink="/myteam/member" class="nav-item">
+        <p>My Team</p>
         <div class="border_bottom"></div>
       </li>
     </ul>
   </div>
   <div class="header-right">
-    <ul class="list-nav-right">
-      <li class="nav-item">
+    <ul *ngIf="!username; else user" class="list-nav-right">
+      <li (click)="handleLogin(true)" class="nav-item">
         Sign in
         <div class="border_bottom"></div>
       </li>
@@ -31,5 +23,17 @@
         <div class="border_bottom"></div>
       </li>
     </ul>
+    <ng-template #user>
+      <ul class="list-nav-right">
+        <li  class="nav-item">
+          Xin chào {{ username }}
+          <div class="border_bottom"></div>
+        </li>
+        <li (click)="logOut()"  class="nav-item">
+          log out
+          <div class="border_bottom"></div>
+        </li>
+      </ul>
+    </ng-template>
   </div>
 </div>
