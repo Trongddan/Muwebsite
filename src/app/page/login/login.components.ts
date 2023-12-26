@@ -23,7 +23,9 @@ export class LoginComponent {
   ) {}
   handleCloseLogin(param: boolean) {
     this.onHandleCloseLogin.emit(param);
-    console.log(12); 
+    console.log(12);
+    console.log(2);
+    console.log(3);
   }
   //dang nhap
   userLogin() {
