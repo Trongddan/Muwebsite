@@ -18,6 +18,7 @@ ngOnInit(){
     items.forEach((item: any) => {
       if (item.offsetTop - window.scrollY < screen.availHeight) {
         item.classList.add('active');
+        console.log(123);
       }
     });
   });
